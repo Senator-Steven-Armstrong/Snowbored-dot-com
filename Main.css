@@ -5,28 +5,33 @@
 
 
 :root{
-    --background-color-primary: rgb(224, 224, 224);
+    --background-color-primary: #e0e0e0;
+    --background-color-secondary: #56638A;
+    --background-color-tertiary: #B07156;
+    --background-color-quaternary: #210F04;
     --text-color-primary: rgb(0, 0, 0);
-    --header-font: "Permanent Marker", sans serif
+    --header-font: "Permanent Marker", sans serif;
+    --box-shadow-color: rgba(0, 0, 0, 0.649);
 }
 
 body{
     margin: 0;
     height: 3000px;
-
     background-color: var(--background-color-primary);
-    
+
+    overflow-x: hidden;
 }
 
 header{
+    position: relative;
+    z-index: 1001;
     width: 100%;
 }
 
 header div{
     width: 100%;
     height: 45vh;
-    min-height: 100px;
-
+    min-height: 20vh;
     background-color: var(--background-color-primary);
     text-align: center;
 }
@@ -34,28 +39,35 @@ header div{
 header div img{
     width: auto;
     height: 80%;
-
-    margin-top: 1%;
+    margin-top: 1%; 
+    
+    /*transition: width 2s;*/
     
 }
+
+/*
+body:hover header div img{
+    width: 30px;
+}
+*/
 
 nav{
     position: sticky;
-    top: 1px; 
+    top: 0px; 
     width: 100%;
-    min-width: 1000px;
-    height: 80px;
+    height: 70px;
 
     background-image: url(images/snowing.gif);
     background-size: 24%;
-    background-repeat: repeat-x;
+    z-index: 1000;
 
     display: flex;
-    justify-content: center ;
+    justify-content: center;
+
+    box-shadow: var(--box-shadow-color) 0px 0px 40px;
 }
 
 nav div{
-    
     height: 95%;
     width: 99.2%;
     margin-top: auto;
@@ -66,17 +78,18 @@ nav div{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5%;
+    gap: 0.3%;
 }
 
 nav div a{
-    flex-grow: 1;
-    height: 80%;
+    width: 100%;
+    height: 90%;
     background-color: whitesmoke;
 
     font-size: 2em;
+    
     font-family: var(--header-font);    
     color: var(--text-color-primary);
     text-decoration: none;
@@ -84,16 +97,103 @@ nav div a{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: width 0.5s;
 }
 
-nav div :first-child{
-
+nav div a:first-child{
+    margin-left: 0.5%;
 }
 
-nav div a:active{
-    border: solid whitesmoke 2px;
+nav div a:last-child{
+    margin-right: 0.5%;
+}
+
+nav div a:nth-child(4){
+    width: 250%;
+}
+
+nav div a:nth-child(4):hover{
+    width: 280%;
 }
 
 nav div a:hover{
     background-color: white;
+    width: 120%;
+}
+
+nav div a img{
+    height: 77%;
+}
+
+#snowboarder{
+    position: absolute;
+    width: 17%;
+    height: auto;
+
+    margin-top: 10%;
+    margin-left: 34%;
+
+    z-index: -1;
+}
+
+#snowy_hill{
+    position: relative;
+    width: 100%;
+
+    z-index: -2;
+    border-bottom: solid var(--background-color-secondary) 10px;
+}   
+
+article{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 14%;
+
+}
+
+article div{
+    float: right;
+    width: 96%;
+    height: 76%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    margin-right: -80%;
+    margin-top: 15%;
+
+    box-shadow: var(--box-shadow-color) 20px 20px 40px;
+    background-color: var(--background-color-secondary);
+
+    transition: margin-right 2s ease-out, scale 2s;
+}
+
+article div img{
+    float: right;
+    margin-right: 0px;
+    margin-top: -8%;
+
+    width: 42%;
+}
+ 
+article:hover div{
+    margin-right: -8%;
+}
+
+#info-container{
+    display: flex;
+}
+
+@media screen and (max-width: 900px) {
+    
+    nav div a:nth-child(4){
+        width: 0px;
+        visibility: collapse;
+    }
+
+    nav div{
+        gap: 0%;
+    }
+
+
 }
