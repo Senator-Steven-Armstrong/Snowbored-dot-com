@@ -109,12 +109,12 @@ nav div a:last-child{
     margin-right: 0.5%;
 }
 
-nav div a:nth-child(4){
-    width: 250%;
+nav div a:nth-child(3){
+    width: 180%;
 }
 
-nav div a:nth-child(4):hover{
-    width: 280%;
+nav div a:nth-child(3):hover{
+    width: 200%;
 }
 
 nav div a:hover{
@@ -133,6 +133,9 @@ nav div a img{
 
     margin-top: 10%;
     margin-left: 34%;
+    animation-name: snowboarder-float;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
 
     z-index: -1;
 }
@@ -165,28 +168,69 @@ article div{
     box-shadow: var(--box-shadow-color) 20px 20px 40px;
     background-color: var(--background-color-secondary);
 
-    transition: margin-right 2s ease-out, scale 2s;
+    transition: margin-right 2s, scale 2s;
 }
 
-article div img{
-    float: right;
-    margin-right: 0px;
-    margin-top: -8%;
+article img{
+    position: absolute;
+    right: 0;
+    margin-top: 8%;
+    margin-right: -60%;
 
-    width: 42%;
+    width: 480px;
+   
+    transition: margin-right 2s 0.5s;
 }
  
 article:hover div{
     margin-right: -8%;
 }
 
+article:hover img{
+    margin-right: -6%;
+}
+
 #info-container{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 90%;
+    height: 24%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28%;
+
+    background-color: #B07156;
+    padding: 1%;
+}
+
+.info-item{
+    width: 32.5%;
+    height: 49%;
+
+
+    background-color: #e0e0e0;
+    text-decoration: none;
+    color: red;
+}
+
+.info-item:nth-child(2){
+    align-self: stretch;
+    height: auto;
+}
+
+@keyframes snowboarder-float {
+    40% {margin-top: 12%;}
+    50% {margin-left: 35%;}
+    90% {margin-top: 10%;}
+    100% {margin-left: 34%}
 }
 
 @media screen and (max-width: 900px) {
     
-    nav div a:nth-child(4){
+    nav div a:nth-child(3){
         width: 0px;
         visibility: collapse;
     }
@@ -194,6 +238,37 @@ article:hover div{
     nav div{
         gap: 0%;
     }
+}
 
+@media screen and (max-width: 800px) {
+    
+    article img{
+        visibility: collapse;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    nav div a:last-child{
+        width: 0px;
+        visibility: collapse;
+    }
+
+    nav {
+        height: 32vh;
+    }
+
+    nav div a{
+        font-size: 16vh;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    
+    nav div a:first-child{
+        width: 0px;
+        visibility: collapse;
+    }
 
 }
