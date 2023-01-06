@@ -9,18 +9,28 @@
     --background-color-secondary: #56638A;
     --background-color-tertiary: #B07156;
     --background-color-quaternary: #210F04;
+    --background-color-dark: #191919;
     --text-color-primary: rgb(0, 0, 0);
     --header-font: "Permanent Marker", sans serif;
+    --font-primary: sans-serif;
     --box-shadow-color: rgba(0, 0, 0, 0.649);
 }
 
 body{
     margin: 0;
-    height: 3000px;
+    height: auto;
     background-color: var(--background-color-primary);
 
     overflow-x: hidden;
 }
+
+/*--------------------------------------------TRANSITIONS-------------------------------------------------*/
+
+.opacity-transition{
+    opacity: 0;
+}
+
+/* --------------------------------------------HEADER----------------------------------------------------*/
 
 header{
     position: relative;
@@ -36,7 +46,7 @@ header div{
     text-align: center;
 }
 
-header div img{
+header div a img{
     width: auto;
     height: 80%;
     margin-top: 1%; 
@@ -50,6 +60,8 @@ body:hover header div img{
     width: 30px;
 }
 */
+
+/* --------------------------------------------NAVBAR----------------------------------------------------*/
 
 nav{
     position: sticky;
@@ -126,6 +138,8 @@ nav div a img{
     height: 77%;
 }
 
+/* --------------------------------------------SNOWY HILL BACKGROUND IMG----------------------------------------------------*/
+
 #snowboarder{
     position: absolute;
     width: 17%;
@@ -148,18 +162,20 @@ nav div a img{
     border-bottom: solid var(--background-color-secondary) 10px;
 }   
 
+/* --------------------------------------------ARTICLE----------------------------------------------------*/
+
 article{
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 14%;
+    height: 80%;
 
 }
 
 article div{
     float: right;
-    width: 96%;
-    height: 76%;
+    width: 100%;
+    height: 70%;
     border-top-left-radius: 80px;
     border-bottom-left-radius: 80px;
     margin-right: -80%;
@@ -177,9 +193,9 @@ article img{
     margin-top: 8%;
     margin-right: -60%;
 
-    width: 480px;
+    width: 40%;
    
-    transition: margin-right 2s 0.5s;
+    transition: margin-right 2s 0.8s;
 }
  
 article:hover div{
@@ -221,12 +237,85 @@ article:hover img{
     height: auto;
 }
 
+/* --------------------------------------------FOOTER----------------------------------------------------*/
+
+footer{
+    position: relative;
+    bottom: 0;
+    margin-top: 20%;
+
+    height: 60%;
+    width: 100%;
+    background-color: var(--background-color-dark);
+
+    text-align: center;
+    line-height: 4;
+    color: white;
+}
+
+footer h3{
+    font-weight: 100;
+    font-size: 40;
+    font-family: var(--header-font);
+    margin: 0;
+}
+
+footer div{
+    width: 100%;
+    height: auto;
+}
+
+footer img{
+    position: absolute;
+    height: 300px;
+    float: right;
+    right: 5%;
+    bottom: 10px;
+}
+
+/* --------------------------------------------ABOUT-CONTAINER----------------------------------------------------*/
+
+.about-container{
+    margin: 5%;
+    width: auto;
+    height: 60%;
+
+    padding: 6%;
+    background-color: var(--background-color-secondary);
+
+    border-radius: 40px;
+    box-shadow: var(--box-shadow-color) 0px 15px 10px;
+    font-family: var(--font-primary);
+    color: var(--background-color-primary);
+    font-size: 20;
+}
+
+.about-container h2{
+    margin: 0;
+    margin-bottom: 4%;
+    font-size: 40;
+    transition: opacity 0.6s;
+}
+
+.about-container p{
+    transition: opacity 0.6s 0.1s;
+}
+
+.about-container:hover .opacity-transition{
+    opacity: 1;
+}
+
+
+/* --------------------------------------------@KEYFRAMES----------------------------------------------------*/
+
 @keyframes snowboarder-float {
     40% {margin-top: 12%;}
     50% {margin-left: 35%;}
     90% {margin-top: 10%;}
     100% {margin-left: 34%}
 }
+
+/* --------------------------------------------@MEDIA SCREEN----------------------------------------------------*/
 
 @media screen and (max-width: 900px) {
     
