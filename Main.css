@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik+80s+Fade&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rubik+Spray+Paint&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
 
 :root{
     --background-color-primary: #e0e0e0;
@@ -12,7 +12,7 @@
     --background-color-dark: #191919;
     --text-color-primary: rgb(0, 0, 0);
     --header-font: "Permanent Marker", sans serif;
-    --font-primary: sans-serif;
+    --font-primary: "Abel", serif;
     --box-shadow-color: rgba(0, 0, 0, 0.649);
 }
 
@@ -29,6 +29,20 @@ body{
 .opacity-transition{
     opacity: 0;
 }
+
+.opacity-transition:hover{
+    opacity: 1;
+}
+
+.lift-transition{
+    transition: all 0.2s ease-out;
+}
+
+.lift-transition:hover{
+    scale: 1.015;
+    box-shadow: var(--box-shadow-color) 0px 0px 25px 
+}
+  
 
 /* --------------------------------------------HEADER----------------------------------------------------*/
 
@@ -96,7 +110,6 @@ nav div{
 }
 
 nav div a{
-    width: 100%;
     height: 90%;
     background-color: whitesmoke;
 
@@ -110,28 +123,46 @@ nav div a{
     justify-content: center;
     align-items: center;
 
-    transition: width 0.5s;
+    transition: all 0.5s;
 }
 
 nav div a:first-child{
     margin-left: 0.5%;
+    width: 250%;
 }
 
-nav div a:last-child{
-    margin-right: 0.5%;
+nav div a:first-child:hover{
+    width: 300%;
+}
+
+nav div a:nth-child(2){
+    width: 200%;
+    transition: all 0.5s;
+}
+
+nav div a:nth-child(2):hover{
+    width: 250%;
 }
 
 nav div a:nth-child(3){
-    width: 180%;
+    width: 150%;
 }
 
 nav div a:nth-child(3):hover{
     width: 200%;
 }
 
+nav div a:last-child{
+    margin-right: 0.5%;
+    width: 100%;
+}
+
+nav div a:last-child:hover{
+    width: 150%;
+}
+
 nav div a:hover{
     background-color: white;
-    width: 120%;
 }
 
 nav div a img{
@@ -176,9 +207,9 @@ article div{
     float: right;
     width: 100%;
     height: 70%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
-    margin-right: -80%;
+    border-top-left-radius: 10.5vh;
+    border-bottom-left-radius: 10.5vh;
+    margin-right: -73%;
     margin-top: 15%;
 
     box-shadow: var(--box-shadow-color) 20px 20px 40px;
@@ -197,7 +228,16 @@ article img{
    
     transition: margin-right 2s 0.8s;
 }
- 
+
+article p{
+    width: 60%;
+    margin-left: 100%;
+    transition: all 1s;
+    color: white;
+    font-family: "Abel";
+    font-size: 2vw;
+}
+
 article:hover div{
     margin-right: -8%;
 }
@@ -206,35 +246,113 @@ article:hover img{
     margin-right: -6%;
 }
 
+article:hover p{
+    margin-left: 5%;
+}
+
+article h2{
+    font-family: "Permanent marker";
+    font-weight: 100;
+    color: white;
+    font-size: 3vw;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+/*-----------------------------------------Info------------------------------------------*/
+
 #info-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
 
-    width: 90%;
-    height: 24%;
+    width: 90vw;
+    height: 120vh;
     margin-left: auto;
     margin-right: auto;
     margin-top: 28%;
+    box-shadow: var(--box-shadow-color) 0px 0px 10px;
 
     background-color: #B07156;
-    padding: 1%;
 }
 
 .info-item{
-    width: 32.5%;
-    height: 49%;
-
-
-    background-color: #e0e0e0;
+    display: block;
+    width: 30%;
+    height: 90%;
+    background-color: var(--background-color-primary);
     text-decoration: none;
-    color: red;
+    color: black;
+    font-family: "Abel";
 }
 
-.info-item:nth-child(2){
-    align-self: stretch;
-    height: auto;
+#info-container div{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#info-container div .info-item{
+    height: 49%;
+    width: 100%;
+
+}
+
+.info-item h2{
+    text-align: center;
+    font-size: 2.5vw;
+    font-family: "Permanent marker";
+    font-weight: 100;
+
+}
+
+#info-container div .info-item:last-child h2{
+    font-size: 2.0vw;
+}
+
+#info-container div .info-item:last-child{
+    border-bottom-left-radius: 2vw;
+}
+
+
+div .info-item:first-child{
+    border-top-left-radius: 4vw;
+    border-bottom-right-radius: 2vw;
+}
+
+#info-container > .info-item:last-child{
+    border-top-right-radius: 4vw;
+}
+
+#info-container > .info-item:nth-child(2){
+    border-bottom-right-radius: 4vw;
+}
+
+.info-item:nth-child(2) h2{
+    font-size: 3.8vw;
+    margin-top: 2.2vh;
+    margin-bottom: 5.2vh;
+}
+
+.info-item p{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#info-container div p{
+    font-size: 1.8vw;
+}
+
+.info-item:nth-child(2) p{
+    font-size: 2.1vw;
+}
+
+.info-item:last-child p{
+    font-size: 2.4vw;
 }
 
 /* --------------------------------------------FOOTER----------------------------------------------------*/
@@ -243,6 +361,8 @@ footer{
     position: relative;
     bottom: 0;
     margin-top: 20%;
+    font-size: 1.3vw;
+    font-family: "abel";
 
     height: 60%;
     width: 100%;
@@ -255,7 +375,7 @@ footer h3{
     line-height: 4;
     text-align: center;
     font-weight: 100;
-    font-size: 35;
+    font-size: 3vw;
     font-family: var(--header-font);
     margin: 0;
 }
@@ -279,7 +399,7 @@ footer img{
 footer div a i{
     margin-top: 1%;
     margin-right: 1.5%;
-    font-size: 50;
+    font-size: 4vw;
     color: var(--background-color-primary);
 }
 
@@ -315,9 +435,10 @@ footer div a i{
     opacity: 1;
 }
 
-/* --------------------------------------------Gear-slope-container/item----------------------------------------------------*/
+/* --------------------------------------------Gear-container/item----------------------------------------------------*/
 
-.gear-slope-container{
+.gear-container{
+    display: block;
     background-color: var(--background-color-primary);
     height: auto;
     width: 90%;
@@ -330,43 +451,138 @@ footer div a i{
     gap: 2vh;
 }
 
-.gear-slope-item{
-    background-color: var(--background-color-primary);
+.gear-item{
+    display: block;
+    background-color: white;
     width: 100%;
-    height: 95vh;
-    margin-left: auto;
-    margin-right: auto;
+    height: 130vh;
     overflow: hidden;
 
+    border: double;
     box-shadow: var(--box-shadow-color) 0px 0px 5px;
-    transition: all 0.2s ease-out;
+    
 }
 
-.gear-slope-item:hover{
-    scale: 1.015;
-    box-shadow: var(--box-shadow-color) 0px 0px 25px   
-}
-
-.gear-slope-item img{
-    display: block;
+.gear-item img{
+    position: relative;
     width: auto;
-    height: 100%;
+    height: 70%;
     float: right;
-    box-shadow: var(--box-shadow-color) 100px 10px 20px;
-    margin-left: 2vw;
+    margin-left: 3vw;
+    border: groove;
+
+    top: 50%;
+    bottom: 50%;
+    right: -16vw;
+    transform: translate(-50%, -50%);
+
 }
 
-.gear-slope-item h2{
+.gear-item h2{
+    padding-left: 6vw;
     font-family: "permanent marker", sans-serif;
-    font-size: 40;
-    font-weight: 700;
-    padding-left: 2vw;
+    font-size: 3vw;
+    font-weight: 100;
+    padding-bottom: 2vh;
 }
 
-.gear-slope-item p{
-    font-size: 30;
-    font-family: sans-serif;
-    padding-left: 2vw;
+.gear-item p{
+    padding-left: 6vw;
+    font-size: 2.3vw;
+    font-family: var(--font-primary);
+    
+}
+
+.gear-item a{
+    text-decoration: none;
+}
+
+/* ---------------------------------------------slope-container/item----------------------------------------------------*/
+
+.slope-container{
+    display: block;
+    background-color: var(--background-color-primary);
+    height: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.slope-item{
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    border: double;
+    box-shadow: var(--box-shadow-color) 0px 0px 5px;
+    z-index: 2;
+}
+
+.slope-item img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    opacity: 0.2;
+}
+
+.slope-item h2{
+    position: relative;
+    z-index: 4;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    font-family: "permanent marker", sans-serif;
+    font-size: 3vw;
+    font-weight: 100;
+    padding-bottom: 2vh;
+}
+
+.slope-item p{
+    position: relative;
+    z-index: 4;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    font-size: 2.6vw;
+    font-family: var(--font-primary);
+}
+
+.slope-item a{
+    position: relative;
+    z-index: 4;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------Purchase-button--------------------------------*/
+
+.purchase-button{
+    position: relative;
+    width: 16vw;
+    height: 10vh;
+    left: 40%;
+    margin-top: 6vh;
+
+    border: outset;
+    background-color: green;
+    border-radius: 1vw;
+    font-size: 2vw;
+    font-family: "Permanent marker";
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s;
+}
+
+.purchase-button:hover{
+    background-color: greenyellow;
 }
 
 /* --------------------------------------------@KEYFRAMES----------------------------------------------------*/
@@ -382,13 +598,10 @@ footer div a i{
 
 @media screen and (max-width: 900px) {
     
-    nav div a:nth-child(3){
+    nav div a:nth-child(2){
         width: 0px;
         visibility: collapse;
-    }
-
-    nav div{
-        gap: 0%;
+        display: none;
     }
 
 }
@@ -398,6 +611,7 @@ footer div a i{
     article img{
         visibility: collapse;
     }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -417,11 +631,10 @@ footer div a i{
 
 }
 
-@media screen and (max-width: 400px) {
-    
-    nav div a:first-child{
-        width: 0px;
-        visibility: collapse;
+@media screen and (max-width: 500px) {
+
+    nav div a{
+        font-size: 12vh;
     }
 
 }
