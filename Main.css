@@ -20,8 +20,6 @@ body{
     margin: 0;
     height: auto;
     background-color: var(--background-color-primary);
-
-    overflow-x: hidden;
 }
 
 /*--------------------------------------------TRANSITIONS-------------------------------------------------*/
@@ -53,9 +51,8 @@ header{
 }
 
 header div{
-    width: 100%;
-    height: 45vh;
-    min-height: 20vh;
+    width: auto;
+    height: 30vh;
     background-color: var(--background-color-primary);
     text-align: center;
 }
@@ -64,23 +61,14 @@ header div a img{
     width: auto;
     height: 80%;
     margin-top: 1%; 
-    
-    /*transition: width 2s;*/
-    
 }
-
-/*
-body:hover header div img{
-    width: 30px;
-}
-*/
 
 /* --------------------------------------------NAVBAR----------------------------------------------------*/
 
 nav{
     position: sticky;
     top: 0px; 
-    width: 100%;
+    width: 100vw;
     height: 70px;
 
     background-image: url(images/snowing.gif);
@@ -205,8 +193,8 @@ article{
 
 article div{
     float: right;
-    width: 100%;
-    height: 70%;
+    width: 90%;
+    height: 58vh;
     border-top-left-radius: 10.5vh;
     border-bottom-left-radius: 10.5vh;
     margin-right: -73%;
@@ -235,11 +223,11 @@ article p{
     transition: all 1s;
     color: white;
     font-family: "Abel";
-    font-size: 2vw;
+    font-size: 5vh;
 }
 
 article:hover div{
-    margin-right: -8%;
+    margin-right: 0%;
 }
 
 article:hover img{
@@ -417,13 +405,13 @@ footer div a i{
     box-shadow: var(--box-shadow-color) 0px 15px 10px;
     font-family: var(--font-primary);
     color: var(--background-color-primary);
-    font-size: 20;
+    font-size: 4vw;
 }
 
 .about-container h2{
     margin: 0;
     margin-bottom: 4%;
-    font-size: 40;
+    font-size: 8vw;
     transition: opacity 0.6s;
 }
 
@@ -466,10 +454,12 @@ footer div a i{
 .gear-item img{
     position: relative;
     width: auto;
-    height: 70%;
+    height: 60%;
     float: right;
     margin-left: 3vw;
-    border: groove;
+    border: outset;
+    padding: 2%;
+    z-index: 5;
 
     top: 50%;
     bottom: 50%;
@@ -517,20 +507,21 @@ footer div a i{
     display: block;
     background-color: white;
     width: 100%;
-    height: 100vh;
+    height: 50vw;
     overflow: hidden;
     
     border: double;
     box-shadow: var(--box-shadow-color) 0px 0px 5px;
     z-index: 2;
+    scale: 1.0;
 }
 
 .slope-item img{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -10;
-    opacity: 0.2;
+    z-index: -1000;
+    opacity: 0.3;
 }
 
 .slope-item h2{
@@ -546,7 +537,7 @@ footer div a i{
 
 .slope-item p{
     position: relative;
-    z-index: 4;
+    z-index: 4000;
     padding-left: 6vw;
     padding-right: 6vw;
     font-size: 2.6vw;
@@ -564,9 +555,9 @@ footer div a i{
 .purchase-button{
     position: relative;
     width: 16vw;
-    height: 10vh;
+    height: 6vw;
     left: 40%;
-    margin-top: 6vh;
+    margin-top: 4vw;
 
     border: outset;
     background-color: green;
@@ -596,45 +587,68 @@ footer div a i{
 
 /* --------------------------------------------@MEDIA SCREEN----------------------------------------------------*/
 
-@media screen and (max-width: 900px) {
-    
-    nav div a:nth-child(2){
-        width: 0px;
-        visibility: collapse;
-        display: none;
+@media screen and (max-width: 2000px) {
+
+    article div{
+        margin-right: 0%;
     }
-
-}
-
-@media screen and (max-width: 800px) {
     
     article img{
-        visibility: collapse;
+        margin-right: -6%;
+    }
+    
+    article p{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    
+    nav{
+        height: 10vh;
+        font-size: 1vw;
+        flex-wrap: wrap;
+    }
+
+    nav div a{
+        width: 50%;
+    }
+
+    nav img{
+        width: 90%;
+    }
+
+    article div{
+        margin-right: 0%;
+    }
+    
+    article img{
+        margin-right: -6%;
+    }
+    
+    article p{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .about-container{
+        font-size: 2vh;
     }
 
 }
 
-@media screen and (max-width: 600px) {
-
-    nav div a:last-child{
-        width: 0px;
-        visibility: collapse;
+@media screen and (max-width: 325px) {
+    
+    .about-container p{
+        font-size: 10vw;
     }
 
-    nav {
-        height: 32vh;
+    .about-container h2{
+        font-size: 8vw;
     }
 
-    nav div a{
-        font-size: 16vh;
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-
-    nav div a{
-        font-size: 12vh;
-    }
 
 }
