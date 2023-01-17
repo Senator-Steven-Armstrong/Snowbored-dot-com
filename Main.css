@@ -18,8 +18,14 @@
 
 body{
     margin: 0;
+    padding: 0;
     height: auto;
+    max-width: 100vw;
     background-color: var(--background-color-primary);
+    background-image: url(images/Snow.svg);
+    background-size: 130%;
+    background-position: center;
+    overflow-x: hidden;
 }
 
 /*--------------------------------------------TRANSITIONS-------------------------------------------------*/
@@ -63,13 +69,44 @@ header div a img{
     margin-top: 1%; 
 }
 
+header #login{
+    width: 16vh;
+    height: 16vh;
+    position: absolute;
+    top: 25%;
+    right: 4%;
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+    color: #191919;
+}
+
+header #login i{
+    font-size: 10vh;
+    margin: 0;
+    transform: rotate(-40deg);
+    margin-left: 10%;
+}
+
+header #login p{
+    font-family: "abel";
+    text-decoration: underline;
+    font-size: 4vh;
+    margin-top: -8%;
+    font-weight: 700;
+    transform: rotate(11deg);
+}
+
+
 /* --------------------------------------------NAVBAR----------------------------------------------------*/
 
 nav{
     position: sticky;
     top: 0px; 
-    width: 100vw;
+    width: 100%;
     height: 70px;
+    overflow-x: hidden;
 
     background-image: url(images/snowing.gif);
     background-size: 24%;
@@ -77,7 +114,6 @@ nav{
 
     display: flex;
     justify-content: center;
-
     box-shadow: var(--box-shadow-color) 0px 0px 40px;
 }
 
@@ -85,6 +121,7 @@ nav div{
     height: 95%;
     width: 99.2%;
     margin-top: auto;
+    overflow-x: hidden;
 
     background-color: var(--background-color-primary);
     opacity: 90%;
@@ -101,6 +138,7 @@ nav div a{
     height: 90%;
     background-color: whitesmoke;
 
+    overflow-x: hidden;
     font-size: 2em;
     
     font-family: var(--header-font);    
@@ -187,8 +225,10 @@ article{
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 80%;
+    height: 100%;
 
+    overflow-x: hidden;
+    overflow-y: visible !important;
 }
 
 article div{
@@ -198,7 +238,8 @@ article div{
     border-top-left-radius: 10.5vh;
     border-bottom-left-radius: 10.5vh;
     margin-right: -73%;
-    margin-top: 15%;
+    margin-top: 8%;
+
 
     box-shadow: var(--box-shadow-color) 20px 20px 40px;
     background-color: var(--background-color-secondary);
@@ -209,10 +250,10 @@ article div{
 article img{
     position: absolute;
     right: 0;
-    margin-top: 8%;
     margin-right: -60%;
+    margin-top: 2%;
 
-    width: 40%;
+    width: 42%;
    
     transition: margin-right 2s 0.8s;
 }
@@ -224,6 +265,15 @@ article p{
     color: white;
     font-family: "Abel";
     font-size: 5vh;
+}
+
+article h2{
+    font-family: "Permanent marker";
+    font-weight: 100;
+    color: white;
+    font-size: 7vh;
+    margin-left: 5%;
+    margin-top: 2%;
 }
 
 article:hover div{
@@ -238,14 +288,7 @@ article:hover p{
     margin-left: 5%;
 }
 
-article h2{
-    font-family: "Permanent marker";
-    font-weight: 100;
-    color: white;
-    font-size: 3vw;
-    margin-left: 5%;
-    margin-top: 2%;
-}
+
 
 /*-----------------------------------------Info------------------------------------------*/
 
@@ -254,11 +297,11 @@ article h2{
     justify-content: space-evenly;
     align-items: center;
 
-    width: 90vw;
-    height: 120vh;
+    width: 90%;
+    height: 120%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 28%;
+    margin-top: 20%;
     box-shadow: var(--box-shadow-color) 0px 0px 10px;
 
     background-color: #B07156;
@@ -269,6 +312,9 @@ article h2{
     width: 30%;
     height: 90%;
     background-color: var(--background-color-primary);
+    background-image: url(images/layered-peaks-haikei.svg);
+    background-position: bottom;
+    background-size: 100%;
     text-decoration: none;
     color: black;
     font-family: "Abel";
@@ -295,7 +341,13 @@ article h2{
     font-size: 2.5vw;
     font-family: "Permanent marker";
     font-weight: 100;
+    text-decoration: underline;
+}
 
+.info-item p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: 600;
 }
 
 #info-container div .info-item:last-child h2{
@@ -306,10 +358,10 @@ article h2{
     border-bottom-left-radius: 2vw;
 }
 
-
 div .info-item:first-child{
     border-top-left-radius: 4vw;
     border-bottom-right-radius: 2vw;
+    background-position: top;
 }
 
 #info-container > .info-item:last-child{
@@ -326,21 +378,16 @@ div .info-item:first-child{
     margin-bottom: 5.2vh;
 }
 
-.info-item p{
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
 #info-container div p{
-    font-size: 1.8vw;
+    font-size: 2vw;
 }
 
 .info-item:nth-child(2) p{
-    font-size: 2.1vw;
+    font-size: 2.2vw;
 }
 
 .info-item:last-child p{
-    font-size: 2.4vw;
+    font-size: 2.6vw;
 }
 
 /* --------------------------------------------FOOTER----------------------------------------------------*/
@@ -349,7 +396,7 @@ footer{
     position: relative;
     bottom: 0;
     margin-top: 20%;
-    font-size: 1.3vw;
+    font-size: 3.6vh;
     font-family: "abel";
 
     height: 60%;
@@ -363,14 +410,14 @@ footer h3{
     line-height: 4;
     text-align: center;
     font-weight: 100;
-    font-size: 3vw;
+    font-size: 6vh;
     font-family: var(--header-font);
     margin: 0;
 }
 
 footer div{
     width: 100%;
-    height: auto;
+    height: 25%;
     padding-left: 6%;
 
     line-height: 1.8;
@@ -378,7 +425,7 @@ footer div{
 
 footer img{
     position: absolute;
-    height: 80%;
+    height: 20vw;
     float: right;
     right: 5%;
     bottom: 10px;
@@ -387,7 +434,7 @@ footer img{
 footer div a i{
     margin-top: 1%;
     margin-right: 1.5%;
-    font-size: 4vw;
+    font-size: 8vh;
     color: var(--background-color-primary);
 }
 
@@ -396,22 +443,25 @@ footer div a i{
 .about-container{
     margin: 5%;
     width: auto;
-    height: 60%;
+    height: 65%;
 
     padding: 6%;
+    padding-bottom: 12%;
     background-color: var(--background-color-secondary);
+    background-image: url(images/Curve\ Line.svg);
+    background-size: 100%;
 
     border-radius: 40px;
     box-shadow: var(--box-shadow-color) 0px 15px 10px;
     font-family: var(--font-primary);
     color: var(--background-color-primary);
-    font-size: 4vw;
+    font-size: 1.7vw;
 }
 
 .about-container h2{
     margin: 0;
     margin-bottom: 4%;
-    font-size: 8vw;
+    font-size: 4vw;
     transition: opacity 0.6s;
 }
 
@@ -441,7 +491,11 @@ footer div a i{
 
 .gear-item{
     display: block;
+    color: white;
     background-color: white;
+    background-image: url(images/layered-waves-haikei.svg);
+    background-size: 100%;
+    background-position: 50% 50%;
     width: 100%;
     height: 130vh;
     overflow: hidden;
@@ -467,6 +521,7 @@ footer div a i{
     transform: translate(-50%, -50%);
 
 }
+
 
 .gear-item h2{
     padding-left: 6vw;
@@ -587,7 +642,7 @@ footer div a i{
 
 /* --------------------------------------------@MEDIA SCREEN----------------------------------------------------*/
 
-@media screen and (max-width: 2000px) {
+/* @media screen and (max-width: 2000px) {
 
     article div{
         margin-right: 0%;
@@ -600,14 +655,96 @@ footer div a i{
     article p{
         margin-left: 5%;
     }
+} */
+
+@media screen and (max-width: 1025px){
+
+    #info-container{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #info-container div{
+        height: 30%;
+        width: 95%;
+        flex-direction: row ;
+
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #info-container div p{
+        font-size: 3vw;
+    }
+    
+    #info-container div h2{
+        font-size: 3.2vw !important;
+        margin-bottom: 0 !important;
+    }
+
+
+    .info-item:last-child h2{
+        margin-bottom: 0 !important;
+        font-size: 4vw;
+    }
+
+    .info-item p{
+        font-size: 3vw !important;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .info-item, #info-container div .info-item{
+        width: 95%;
+        height: 30%;
+        padding: 0%;
+        margin: 0%;
+        border-radius: 0% !important;
+        border: double 6px;
+        box-shadow: var(--box-shadow-color) 0px 0px 20px;
+    }
+
+    #info-container div .info-item{
+        width: 48%;
+        height: 100%;
+    }
+
+    .info-item:last-child{
+        background-size: 150%;
+    }
+    
+    #info-container > .info-item:nth-child(2){
+        background-size: 150%;
+        background-position: 50% 89%;
+    }
+
+    #info-container div .info-item{
+        background-position: top;
+    }
+
+
+
+    article div{
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+
+    article img{
+        visibility: collapse;
+    }
+
+    article p{
+        width: 90%;
+        font-size: 4vw;
+    }
+    
 }
 
 @media screen and (max-width: 900px) {
 
-    
     nav{
-        height: 10vh;
-        font-size: 1vw;
+        height: 18vh;
+        font-size: 2vw;
         flex-wrap: wrap;
     }
 
@@ -632,10 +769,15 @@ footer div a i{
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 800px){
 
-    .about-container{
-        font-size: 2vh;
+
+}
+
+@media screen and (max-width: 650px){
+
+    article h2{
+        font-size: 7vw;
     }
 
 }
@@ -649,6 +791,5 @@ footer div a i{
     .about-container h2{
         font-size: 8vw;
     }
-
 
 }
