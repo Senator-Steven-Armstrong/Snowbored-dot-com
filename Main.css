@@ -6,7 +6,6 @@
     --background-color-secondary: #56638A;
     --background-color-tertiary: #B07156;
     --background-color-dark: #191919;
-    --text-color-primary: rgb(0, 0, 0);
     --header-font: "Permanent Marker", sans serif;
     --font-primary: "Abel", serif;
     --box-shadow-color: rgba(0, 0, 0, 0.649);
@@ -136,7 +135,7 @@ nav div a{
     font-size: 2em;
     
     font-family: var(--header-font);    
-    color: var(--text-color-primary);
+    color: black;
     text-decoration: none;
 
     display: flex;
