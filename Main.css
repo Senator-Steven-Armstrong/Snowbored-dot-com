@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Metal+Mania&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rubik+80s+Fade&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rubik+Spray+Paint&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
 
@@ -8,7 +5,6 @@
     --background-color-primary: #e0e0e0;
     --background-color-secondary: #56638A;
     --background-color-tertiary: #B07156;
-    --background-color-quaternary: #210F04;
     --background-color-dark: #191919;
     --text-color-primary: rgb(0, 0, 0);
     --header-font: "Permanent Marker", sans serif;
@@ -20,12 +16,12 @@ body{
     margin: 0;
     padding: 0;
     height: auto;
-    max-width: 100vw;
+    width: 100%;
+    min-width: 300px;
     background-color: var(--background-color-primary);
     background-image: url(images/Snow.svg);
     background-size: 130%;
     background-position: center;
-    overflow-x: hidden;
 }
 
 /*--------------------------------------------TRANSITIONS-------------------------------------------------*/
@@ -73,7 +69,7 @@ header #login{
     width: 16vh;
     height: 16vh;
     position: absolute;
-    top: 25%;
+    top: 35%;
     right: 4%;
     display: block;
 
@@ -83,7 +79,7 @@ header #login{
 }
 
 header #login i{
-    font-size: 10vh;
+    font-size: 6vh;
     margin: 0;
     transform: rotate(-40deg);
     margin-left: 10%;
@@ -92,8 +88,8 @@ header #login i{
 header #login p{
     font-family: "abel";
     text-decoration: underline;
-    font-size: 4vh;
-    margin-top: -8%;
+    font-size: 3vh;
+    margin-top: -6%;
     font-weight: 700;
     transform: rotate(11deg);
 }
@@ -106,7 +102,6 @@ nav{
     top: 0px; 
     width: 100%;
     height: 70px;
-    overflow-x: hidden;
 
     background-image: url(images/snowing.gif);
     background-size: 24%;
@@ -115,13 +110,14 @@ nav{
     display: flex;
     justify-content: center;
     box-shadow: var(--box-shadow-color) 0px 0px 40px;
+
+    overflow-x: hidden !important;
 }
 
 nav div{
     height: 95%;
     width: 99.2%;
     margin-top: auto;
-    overflow-x: hidden;
 
     background-color: var(--background-color-primary);
     opacity: 90%;
@@ -132,6 +128,8 @@ nav div{
     justify-content: space-between;
     align-items: center;
     gap: 0.3%;
+
+    overflow-x: hidden !important;
 }
 
 nav div a{
@@ -150,6 +148,8 @@ nav div a{
     align-items: center;
 
     transition: all 0.5s;
+
+    overflow-x: hidden !important;
 }
 
 nav div a:first-child{
@@ -225,7 +225,8 @@ article{
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
+    padding-bottom: 20%;
 
     overflow-x: hidden;
     overflow-y: visible !important;
@@ -301,10 +302,10 @@ article:hover p{
     height: 120%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20%;
+    margin-top: 20vh;
     box-shadow: var(--box-shadow-color) 0px 0px 10px;
 
-    background-color: #B07156;
+    background-color: var(--background-color-tertiary);
 }
 
 .info-item{
@@ -416,7 +417,7 @@ footer h3{
 }
 
 footer div{
-    width: 100%;
+    width: 90%;
     height: 25%;
     padding-left: 6%;
 
@@ -443,25 +444,26 @@ footer div a i{
 .about-container{
     margin: 5%;
     width: auto;
-    height: 65%;
+    min-width: 620px !important;
+    height: auto;
 
     padding: 6%;
     padding-bottom: 12%;
     background-color: var(--background-color-secondary);
     background-image: url(images/Curve\ Line.svg);
-    background-size: 100%;
+    background-size: cover;
 
     border-radius: 40px;
     box-shadow: var(--box-shadow-color) 0px 15px 10px;
     font-family: var(--font-primary);
     color: var(--background-color-primary);
-    font-size: 1.7vw;
+    font-size: 1.4em;
 }
 
 .about-container h2{
     margin: 0;
     margin-bottom: 4%;
-    font-size: 4vw;
+    font-size: 2em;
     transition: opacity 0.6s;
 }
 
@@ -493,11 +495,11 @@ footer div a i{
     display: block;
     color: white;
     background-color: white;
-    background-image: url(images/layered-waves-haikei.svg);
-    background-size: 100%;
+    background-image: url(images/Meteor.svg);
+    background-size: 180%;
     background-position: 50% 50%;
     width: 100%;
-    height: 130vh;
+    height: auto;
     overflow: hidden;
 
     border: double;
@@ -507,10 +509,11 @@ footer div a i{
 
 .gear-item img{
     position: relative;
-    width: auto;
-    height: 60%;
+    width: 20vw;
+    height: auto;
     float: right;
-    margin-left: 3vw;
+    margin-top: 40%;
+    margin-right: 8%;
     border: outset;
     padding: 2%;
     z-index: 5;
@@ -525,14 +528,17 @@ footer div a i{
 
 .gear-item h2{
     padding-left: 6vw;
+
     font-family: "permanent marker", sans-serif;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 100;
     padding-bottom: 2vh;
 }
 
 .gear-item p{
+    width: 50vw;
     padding-left: 6vw;
+    padding-right: 6vw;
     font-size: 2.3vw;
     font-family: var(--font-primary);
     
@@ -562,7 +568,7 @@ footer div a i{
     display: block;
     background-color: white;
     width: 100%;
-    height: 50vw;
+    height: auto;
     overflow: hidden;
     
     border: double;
@@ -585,7 +591,7 @@ footer div a i{
     padding-left: 6vw;
     padding-right: 6vw;
     font-family: "permanent marker", sans-serif;
-    font-size: 3vw;
+    font-size: 2em;
     font-weight: 100;
     padding-bottom: 2vh;
 }
@@ -595,7 +601,7 @@ footer div a i{
     z-index: 4000;
     padding-left: 6vw;
     padding-right: 6vw;
-    font-size: 2.6vw;
+    font-size: 1.6em;
     font-family: var(--font-primary);
 }
 
@@ -613,6 +619,7 @@ footer div a i{
     height: 6vw;
     left: 40%;
     margin-top: 4vw;
+    margin-bottom: 5%;
 
     border: outset;
     background-color: green;
@@ -631,6 +638,126 @@ footer div a i{
     background-color: greenyellow;
 }
 
+/* --------------------------------------------LOGIN----------------------------------------------------*/
+
+.login-container{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.about-container h5{
+    margin-bottom: 5%;
+}
+
+.login-container div{
+    width: 40%;
+    height: 12%;
+
+    margin-bottom: 3%;
+}
+
+input{
+    width: 100%;
+    padding: 2%;
+}
+
+input:focus{
+    background-color: lightsteelblue;
+}
+
+.login-container div:nth-child(3){
+    width: 60%;
+}
+
+select{
+    padding: 1vw;
+    width: 100%;
+}
+
+.radio-group{
+    width: 100% !important;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1vw;
+
+    background-color: white;
+    border: solid gray 1px;
+    color: #191919;
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.login-container div:nth-child(4){
+    width: 65%; 
+    min-width: 500px !important;
+}
+
+.login-container div:nth-child(5){
+    width: 35%; 
+    min-width: 250px !important;
+}
+
+.radio-group input{
+    margin-left: 2%;
+    margin-right: 25%;
+}
+
+.login-button{
+    display: block;
+    width: 16vw;
+    min-width: 125px;
+    height: auto;
+    padding: 2%;
+    background-color: #56638A;
+    margin-top: 5%;
+    margin-left: 5%;
+    color: white;
+    font-family: "permanent marker";
+    text-align: center;
+    border-radius: 1.5vw;
+    border: outset gray 0.3vw;
+    box-shadow: var(--box-shadow-color) 10px 10px 10px;
+    transition: all 0.1s ease-out;
+}
+
+.login-button:hover{
+    background-color: #67759d;
+    border: outset rgb(154, 154, 154) 0.3vw;
+    scale: 1.02;
+}
+
+
+
+.return-button{
+    width: 16vw;
+    height: auto;
+    background-color: #191919;
+    font-family: "permanent marker";
+    text-align: center;
+    font-size: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+    box-shadow: var(--box-shadow-color) 0px 10px 15px;
+    padding: 2%;
+    transition: all 0.1s ease-out;
+}
+
+.return-button a{
+    color: white;
+}
+
+.return-button:hover{
+    background-color: #333333;
+    scale: 1.01;
+}
+
 /* --------------------------------------------@KEYFRAMES----------------------------------------------------*/
 
 @keyframes snowboarder-float {
@@ -642,7 +769,22 @@ footer div a i{
 
 /* --------------------------------------------@MEDIA SCREEN----------------------------------------------------*/
 
-/* @media screen and (max-width: 2000px) {
+@media screen and (max-width: 900px){
+
+
+    nav{
+        height: 18vh;
+        font-size: 2vw;
+        flex-wrap: wrap;
+    }
+
+    nav div a{
+        width: 50%;
+    }
+
+    nav img{
+        width: 90%;
+    }
 
     article div{
         margin-right: 0%;
@@ -655,13 +797,13 @@ footer div a i{
     article p{
         margin-left: 5%;
     }
-} */
 
-@media screen and (max-width: 1025px){
 
+    
     #info-container{
         flex-wrap: wrap;
         flex-direction: column;
+        height: 150vh;
     }
 
     #info-container div{
@@ -740,56 +882,35 @@ footer div a i{
     
 }
 
-@media screen and (max-width: 900px) {
-
-    nav{
-        height: 18vh;
-        font-size: 2vw;
-        flex-wrap: wrap;
-    }
-
-    nav div a{
-        width: 50%;
-    }
-
-    nav img{
-        width: 90%;
-    }
-
-    article div{
-        margin-right: 0%;
-    }
-    
-    article img{
-        margin-right: -6%;
-    }
-    
-    article p{
-        margin-left: 5%;
-    }
-}
-
-@media screen and (max-width: 800px){
-
-
-}
-
 @media screen and (max-width: 650px){
 
     article h2{
         font-size: 7vw;
     }
 
-}
-
-@media screen and (max-width: 325px) {
-    
-    .about-container p{
-        font-size: 10vw;
+    article div{
+        height: 50vw;
     }
 
-    .about-container h2{
-        font-size: 8vw;
+    .slope-item h2{
+        font-size: 1.2em;
+    }
+
+    .slope-item p{
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
+    footer img{
+        visibility: collapse;
+        display: none;
+    }
+
+    header div a img{
+        margin-right: 40%;
     }
 
 }
