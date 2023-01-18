@@ -110,8 +110,6 @@ nav{
     display: flex;
     justify-content: center;
     box-shadow: var(--box-shadow-color) 0px 0px 40px;
-
-    overflow-x: hidden !important;
 }
 
 nav div{
@@ -128,8 +126,6 @@ nav div{
     justify-content: space-between;
     align-items: center;
     gap: 0.3%;
-
-    overflow-x: hidden !important;
 }
 
 nav div a{
@@ -148,8 +144,6 @@ nav div a{
     align-items: center;
 
     transition: all 0.5s;
-
-    overflow-x: hidden !important;
 }
 
 nav div a:first-child{
@@ -444,7 +438,6 @@ footer div a i{
 .about-container{
     margin: 5%;
     width: auto;
-    min-width: 620px !important;
     height: auto;
 
     padding: 6%;
@@ -493,9 +486,8 @@ footer div a i{
 
 .gear-item{
     display: block;
-    color: white;
-    background-color: white;
-    background-image: url(images/Meteor.svg);
+    color: black;
+    background-color: whitesmoke;
     background-size: 180%;
     background-position: 50% 50%;
     width: 100%;
@@ -530,7 +522,7 @@ footer div a i{
     padding-left: 6vw;
 
     font-family: "permanent marker", sans-serif;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 100;
     padding-bottom: 2vh;
 }
@@ -660,7 +652,7 @@ footer div a i{
     width: 40%;
     height: 12%;
 
-    margin-bottom: 3%;
+    margin-bottom: 4vh;
 }
 
 input{
@@ -697,12 +689,10 @@ select{
 
 .login-container div:nth-child(4){
     width: 65%; 
-    min-width: 500px !important;
 }
 
 .login-container div:nth-child(5){
     width: 35%; 
-    min-width: 250px !important;
 }
 
 .radio-group input{
@@ -713,7 +703,6 @@ select{
 .login-button{
     display: block;
     width: 16vw;
-    min-width: 125px;
     height: auto;
     padding: 2%;
     background-color: #56638A;
@@ -721,6 +710,7 @@ select{
     margin-left: 5%;
     color: white;
     font-family: "permanent marker";
+    font-size: 3vw;
     text-align: center;
     border-radius: 1.5vw;
     border: outset gray 0.3vw;
@@ -768,6 +758,37 @@ select{
 }
 
 /* --------------------------------------------@MEDIA SCREEN----------------------------------------------------*/
+
+@media screen and (max-width: 1000px){
+
+    .return-button{
+        width: 40vw;
+        font-size: 3vw;
+    }
+
+    .radio-group{
+        width: 60% !important;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .radio-group span{
+        width: 60%;
+    }
+
+    .radio-group input{
+        width: 40%;
+        height: 10%;
+        margin: 0;
+        margin-top: 1%;
+        padding: 2%;
+    }
+
+    .login-container div:last-child{
+        width: 80% !important;
+    }
+
+} 
 
 @media screen and (max-width: 900px){
 
@@ -880,7 +901,7 @@ select{
         font-size: 4vw;
     }
     
-}
+}  
 
 @media screen and (max-width: 650px){
 
